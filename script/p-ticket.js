@@ -80,6 +80,9 @@ function couponBtn() {
         couponBox.style.display = 'none';
         document.getElementById('discount-container').innerText = `Discount Price : ${discount}`
     }
+    else {
+        alert('invalid coupon code...')
+    }
 
 }
 
