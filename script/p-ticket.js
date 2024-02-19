@@ -28,6 +28,8 @@ for (const seatBtn of seatButton) {
         if (tbody.childNodes.length > 4) {
             alert("You can take a maximum of 4 seats")
             return
+        } else if (tbody.childNodes.length === 4) {
+            document.getElementById("apply").removeAttribute( "disabled" );
         }
         tbody.append(tr);
 
@@ -88,5 +90,5 @@ function couponBtn() {
 }
 
 document.getElementById('reload-btn').addEventListener('click', function () {
-    location.reload(this.replaceWith());
+    location.reload();
 })
