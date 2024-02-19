@@ -47,12 +47,12 @@ for (const seatBtn of seatButton) {
 
         // set grand total
         setInnerText('grand-total', convertTotalPrice + convertPrice)
-
+        
         // Set seat Background color
-        const selectedSeats = e.target
-        selectedSeats.classList.add('bg-[#1DD100]');
-        selectedSeats.classList.add('text-white');
-
+        const selectedSeats = e.target;
+        selectedSeats.setAttribute("disabled", true);
+        selectedSeats.style.backgroundColor = '#1DD100'
+        selectedSeats.style.color =  'white';
 
     })
 }
