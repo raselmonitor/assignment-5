@@ -82,6 +82,7 @@ function couponBtn() {
     }
     else {
         alert('invalid coupon code...')
+        document.getElementById('input-filed').value = '';
     }
 
 }
