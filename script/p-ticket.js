@@ -25,11 +25,12 @@ for (const seatBtn of seatButton) {
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
+
         if (tbody.childNodes.length > 4) {
             alert("You can take a maximum of 4 seats")
             return
         } else if (tbody.childNodes.length === 4) {
-            document.getElementById("apply").removeAttribute( "disabled" );
+            document.getElementById("apply").removeAttribute("disabled");
         }
         tbody.append(tr);
 
@@ -49,12 +50,12 @@ for (const seatBtn of seatButton) {
 
         // set grand total
         setInnerText('grand-total', convertTotalPrice + convertPrice)
-        
+
         // Set seat Background color
         const selectedSeats = e.target;
         selectedSeats.setAttribute("disabled", true);
         selectedSeats.style.backgroundColor = '#1DD100'
-        selectedSeats.style.color =  'white';
+        selectedSeats.style.color = 'white';
 
     })
 }
@@ -91,4 +92,15 @@ function couponBtn() {
 
 document.getElementById('reload-btn').addEventListener('click', function () {
     location.reload();
+})
+
+// set select minimum 1 seat and number input length > 0 theke beshi
+document.addEventListener("keyup", function (event) {
+    const tbody = document.getElementById('t-body');
+    const numberInput = document.getElementById('number-input').value;
+    const inputFiled = numberInput.toString();
+    if (tbody.childNodes.length >= 1 && inputFiled.length > 0) {
+        document.getElementById('next-btn').disabled = false;
+    }
+
 })

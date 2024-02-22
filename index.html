@@ -334,7 +334,7 @@
                                         <span class="label-text inter-font font-semibold text-lg text-black">Phone
                                             Number*</span>
                                     </div>
-                                    <input type="number" required placeholder="Enter your phone number"
+                                    <input id="number-input" type="number" required placeholder="Enter your phone number"
                                         class="input input-bordered w-full " />
                                     <div class="label">
                                         <span class="label-text inter-font font-semibold text-lg text-black">Email
@@ -343,7 +343,7 @@
                                     <input type="email" required placeholder="Enter your email id"
                                         class="input input-bordered w-full " />
                                     <!-- Modal Section -->
-                                    <button
+                                    <button disabled id="next-btn"
                                         class="btn btn-praimary outline-none bg-[#1DD100] text-white rale-font text-xl font-extrabold mt-5"
                                         onclick="my_modal_1.showModal()">Next</button>
                                     <dialog id="my_modal_1" class="modal">
